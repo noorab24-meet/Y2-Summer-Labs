@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home Page</title>
+</head>
+<body>
+    <form action="{{ url_for('home') }}" method="POST">
+        <label for="birth_month">Enter your birth month:</label>
+        <input type="text" id="birth_month" name="birth_month" required>
+        <button type="submit">Tell my fortune</button>
+    </form>
+    <h1>Welcome to the Home Page</h1>
+    <p>Here we care about your psychological state because of CSS.</p>
+</body>
+</html>
