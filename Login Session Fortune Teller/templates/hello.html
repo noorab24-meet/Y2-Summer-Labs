@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortune Teller</title>
+</head>
+<body>
+    <h1>Fortune Teller</h1>
+    <form method="POST" action="/home">
+        <label for="birth_month">Enter your birth month:</label>
+        <input type="text" id="birth_month" name="birth_month" required>
+        <button type="submit">Tell my fortune</button>
+    </form>
+    <br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>
