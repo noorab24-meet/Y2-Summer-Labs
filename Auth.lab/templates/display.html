@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Quotes</title>
+</head>
+<body>
+    <h1>All Quotes</h1>
+    <ul>
+        {% for quote in quotes %}
+            <li>{{ quote }}</li>
+        {% endfor %}
+    </ul>
+    <p><a href="/home">Submit another quote</a></p>
+</body>
+</html>
