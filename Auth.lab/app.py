@@ -28,8 +28,8 @@ def signup():
             session['user'] = user['idToken']
             session['quotes'] = []
             return redirect(url_for('home'))
-        except:
-            return "Error creating account"
+        except Exception as e:
+            return f"Error creating account: {e}"
     return render_template('signup.html')
 
 @app.route('/signin', methods=['GET', 'POST'])
@@ -42,12 +42,13 @@ def signin():
             session['user'] = user['idToken']
             session['quotes'] = []
             return redirect(url_for('home'))
-        except:
-            return "Error signing in"
+        except Exception as e:
+            return f"Error signing in: {e}"
     return render_template('signin.html')
 
 @app.route('/signout', methods=['POST'])
 def signout():
+    auth.current_user = None
     session.clear()
     return redirect(url_for('signin'))
 
@@ -58,6 +59,8 @@ def home():
     if request.method == 'POST':
         quote = request.form['quote']
         session['quotes'].append(quote)
+        session.modified = True
+
         return redirect(url_for('thanks'))
     return render_template('home.html')
 
@@ -69,8 +72,8 @@ def thanks():
 def display():
     if 'user' not in session:
         return redirect(url_for('signin'))
-    quotes = session.get('quotes', [])
-    return render_template('display.html', quotes=quotes)
+    return render_template('display.html', quotes=session['quotes'])
 
 if __name__ == '__main__':
     app.run(debug=True)
+
