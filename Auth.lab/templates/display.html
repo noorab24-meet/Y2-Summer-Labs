@@ -7,7 +7,11 @@
     <h1>All Quotes</h1>
     <ul>
         {% for quote in quotes %}
-            <li>{{ quote }}</li>
+            <li>
+                <strong>Quote:</strong> {{ quote['quote'] }}<br>
+                <strong>Speaker:</strong> {{ quote['speaker'] }}<br>
+                <strong>Additional Info:</strong> {{ quote['additional_info'] }}
+            </li>
         {% endfor %}
     </ul>
     <p><a href="/home">Submit another quote</a></p>
