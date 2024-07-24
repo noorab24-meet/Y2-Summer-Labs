@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Comedy Movies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .btn-info {
+            background-color: #17a2b8;
+            color: white;
+        }
+        .btn-info:hover {
+            background-color: #138496;
+        }
+        .mt-5 {
+            margin-top: 50px;
+        }
+        .mt-3 {
+            margin-top: 30px;
+        }
+        .movie {
+            margin-bottom: 30px;
+        }
+        .movie img {
+            display: block;
+            margin: 0 auto 10px;
+        }
+        .movie p {
+            margin: 0 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Comedy Movies</h1>
+
+        <div class="movie">
+            <a href="/players_movie">
+                <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/Players_2024_poster.jpg" alt="Players" width="100" height="100">
+            </a>
+            <p>
+                <a href="https://en.wikipedia.org/wiki/Players_(2024_film)" target="_blank">Players</a>
+                <form action="/addToMyList" method="post" style="display:inline;">
+                    <input type="hidden" name="movie" value="Players">
+                    <button type="submit" class="btn btn-info">Add to My List</button>
+                </form>
+            </p>
+        </div>
+
+        <div class="movie">
+            <a href="/redone_movie">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Red_One_poster.jpg" alt="Red One" width="100" height="100">
+            </a>
+            <p>
+                <a href="https://en.wikipedia.org/wiki/Red_One_(film)" target="_blank">Red One</a>
+                <form action="/addToMyList" method="post" style="display:inline;">
+                    <input type="hidden" name="movie" value="Red One">
+                    <button type="submit" class="btn btn-info">Add to My List</button>
+                </form>
+            </p>
+        </div>
+
+        <div class="movie">
+            <a href="/irishwish_movie">
+                <img src="https://upload.wikimedia.org/wikipedia/en/3/39/Irish_Wish_film_poster.png" alt="Irish Wish" width="100" height="100">
+            </a>
+            <p>
+                <a href="https://en.wikipedia.org/wiki/Irish_Wish" target="_blank">Irish Wish</a>
+                <form action="/addToMyList" method="post" style="display:inline;">
+                    <input type="hidden" name="movie" value="Irish Wish">
+                    <button type="submit" class="btn btn-info">Add to My List</button>
+                </form>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
+
+

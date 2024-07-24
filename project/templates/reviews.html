@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reviews</title>
+</head>
+<body>
+    <h1>Reviews for Movie: {{ movie_id }}</h1>
+    <ul>
+        {% for review_id, review in reviews.items() %}
+            <li>{{ review['review'] }} - User: {{ review['user_id'] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('movie', movie_id=movie_id) }}">Back to Review Page</a>
+</body>
+</html>
