@@ -12,7 +12,7 @@ Config= {
   "storageBucket": "auth-lab-bfd14.appspot.com",
   "messagingSenderId": "53978111196",
   "appId": "1:53978111196:web:33254ef92b816de25f6819",
-  "measurementId": "G-76KPB174YX"
+  "measurementId": "G-76KPB174YX",
 }
 
 

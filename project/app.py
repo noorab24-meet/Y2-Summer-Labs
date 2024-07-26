@@ -78,7 +78,7 @@ def logout():
     session.pop('user_id', None)
     session.pop('user_name', None)
     session.pop('user_email', None)
-    return redirect(url_for('signin'))
+    return redirect(url_for('home'))
 
 @app.route('/addToMyList', methods=['POST'])
 def addToMyList():

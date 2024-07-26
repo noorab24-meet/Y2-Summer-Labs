@@ -74,7 +74,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome, {{ user['full_name'] }}!</h1>
+        <h1>Welcome {{ user['full_name'] }}!</h1>
         <p>Email: {{ user['email'] }}</p>
         <a href="/logout" class="btn btn-logout">Logout</a>
         <a href="/moviestype" class="btn btn-movies">Browse Movies</a>
